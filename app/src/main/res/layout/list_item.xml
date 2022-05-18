@@ -5,12 +5,13 @@
     android:layout_height="wrap_content"
     android:background="@drawable/item_selector"
     android:focusable="true">
+
     <TextView
         android:id="@+id/topic"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:textColor="#ffffff"
         android:gravity="center"
-        tools:text="Education"/>
+        android:textColor="#ffffff"
+        tools:text="Education" />
 </LinearLayout>
 

@@ -1,8 +1,8 @@
 package com.example.recyclerviewitemfocus
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +11,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val topics = listOf("Education","Finance","Government","Entertainment","Technology","Math","Biology","Physics","Chemistry","Space","Sports","Music","Animal","Countries","Weather","Politics","Traffic","Poverty","Social Media","Internet","Housing")
+        val topics = listOf(
+            "Education",
+            "Finance",
+            "Government",
+            "Entertainment",
+            "Technology",
+            "Math",
+            "Biology",
+            "Physics",
+            "Chemistry",
+            "Space",
+            "Sports",
+            "Music",
+            "Animal",
+            "Countries",
+            "Weather",
+            "Politics",
+            "Traffic",
+            "Poverty",
+            "Social Media",
+            "Internet",
+            "Housing"
+        )
         val linearLayoutManager = LinearLayoutManager(this)
         val listAdapter = ItemListAdapter(topics)
 
