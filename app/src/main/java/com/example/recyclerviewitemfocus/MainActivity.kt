@@ -2,7 +2,8 @@ package com.example.recyclerviewitemfocus
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -34,12 +35,10 @@ class MainActivity : AppCompatActivity() {
             "Internet",
             "Housing"
         )
-        val linearLayoutManager = LinearLayoutManager(this)
+        val gridLayoutManager = GridLayoutManager(this, 6, RecyclerView.VERTICAL, false)
         val listAdapter = ItemListAdapter(topics)
 
-        recycler_view.setHasFixedSize(true)
-        recycler_view.layoutManager = linearLayoutManager
+        recycler_view.layoutManager = gridLayoutManager
         recycler_view.adapter = listAdapter
-
     }
 }
